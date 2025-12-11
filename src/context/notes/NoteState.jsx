@@ -3,7 +3,7 @@ import NoteContext from "./noteContext";
 
 
 const NoteState = (props) => {
-  const host = "https://inotebook-backend-yb82.onrender.com/"
+  const host = "https://inotebook-backend-yb82.onrender.com"
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
 
