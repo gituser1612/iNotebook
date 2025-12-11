@@ -8,11 +8,10 @@ const Signup = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password } = credentials;
-    const response = await fetch('http://localhost:5000/api/auth/createuser', {
+    const response = await fetch('https://inotebook-backend-yb82.onrender.com/api/auth/createuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        // 'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkyZmM2MTBiNjYwNzU3ZDE0M2FlZWI4In0sImlhdCI6MTc2NDc0NTEwNn0.RN8zRaqk4A-wJ9iiFIJPAdyznGy_qv66PAvHqDTVKCc'
       },
       body: JSON.stringify({ name, email, password })
     });
